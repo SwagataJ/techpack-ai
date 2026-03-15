@@ -28,20 +28,21 @@ If the message is a valid tech pack revision request, apply the designer's reque
 Return a JSON object with exactly three keys:
 1. "changes" — a brief human-readable summary of what you changed (1-3 sentences)
 2. "regenerateCAD" — boolean. This controls whether the technical flat drawings are regenerated.
-   Set to TRUE if the change would make the garment LOOK different in a flat sketch — i.e. any change to construction, structure, shape, or visible design elements. Examples that REQUIRE regenerateCAD=true:
+   Set to TRUE ONLY if the change alters the STRUCTURE or SHAPE of the garment — i.e. the flat sketch outline would look different. Examples that REQUIRE regenerateCAD=true:
    - Changing hem type (e.g. regular to elastic, ribbed, cuffed)
    - Adding/removing/changing pockets, vents, slits, pleats
    - Changing collar or neckline style
-   - Changing sleeve type or length
+   - Changing sleeve TYPE (e.g. short sleeve to long sleeve, raglan to set-in) — NOT changing a measurement number
    - Changing closure type (buttons to zipper, etc.)
    - Adding/removing design elements (yoke, panels, piping, trims)
    - Changing garment silhouette or fit
-   Set to FALSE for changes that would NOT be visible in a line drawing:
-   - Adjusting measurement numbers
+   Set to FALSE for changes that only update TEXT or NUMBERS without changing the garment's shape:
+   - Adjusting measurement numbers/values (e.g. "make sleeve length 65", "change chest width to 110") — these are ALWAYS minor, even if they mention a structural part like sleeve, collar, or hem. The CAD only displays text labels, not scaled drawings.
    - Changing fabric composition text or weight
    - Updating colors/pantone codes (color changes are NEVER major — always set regenerateCAD=false)
    - Fixing typos, changing names, updating care instructions
-   When in doubt, set to true — EXCEPT for color/colour changes which must ALWAYS be false.
+   CRITICAL: If the user is only changing a NUMBER or VALUE for an existing measurement, regenerateCAD must be false. The key question is: does the garment's SHAPE change, or just a number? Numbers are always minor.
+   When in doubt, set to true — EXCEPT for measurement value changes and color/colour changes which must ALWAYS be false.
 3. "specifications" — the complete updated specifications object (same structure as above, with changes applied)
 
 Return ONLY valid JSON, no markdown fences, no other text.`;
