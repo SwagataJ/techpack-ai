@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment & secrets
+.env
+*.env.local
+service-account.json
+*.pem
+*.key
+
+# Generated files
+backend/output/
+backend/uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+.kiro/
+*.swp
+*.swo
+
+# Test files
+backend/test-*.ts
+
+# Local docs
+design.md
+requirements.md
+tasks-mvp.md

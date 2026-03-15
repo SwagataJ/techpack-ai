@@ -1,0 +1,625 @@
+/* ═══════ TECH SHEET — 3-page HTML layout ═══════ */
+.ts {
+  max-width: 870px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.ts-page {
+  border: 1.5px solid #C8C2B8;
+  margin-bottom: 24px;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* ── Page header ── */
+.ts-header {
+  display: grid;
+  grid-template-columns: 72px 1fr 1.6fr;
+  border-bottom: 1.5px solid #C8C2B8;
+}
+
+.ts-logo {
+  border-right: 1.5px solid #C8C2B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 6px;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1px;
+  background: #1a1a2e;
+  color: #fff;
+}
+
+.ts-desc-cell {
+  padding: 10px 14px;
+  border-right: 1.5px solid #C8C2B8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ts-desc-main {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.ts-style-cell {
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.ts-subrow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-bottom: 1.5px solid #C8C2B8;
+}
+
+.ts-sub-cell {
+  padding: 5px 14px;
+  font-size: 11px;
+  color: #333;
+  border-right: 1.5px solid #C8C2B8;
+}
+
+.ts-sub-cell:last-child {
+  border-right: none;
+}
+
+.ts-sub-label {
+  color: #888;
+  margin-right: 3px;
+}
+
+/* ── Page footer ── */
+.ts-footer {
+  border-top: 1.5px solid #C8C2B8;
+  padding: 6px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  color: #999;
+}
+
+.ts-footer-brand {
+  font-weight: 800;
+  color: #111;
+  font-size: 11px;
+}
+
+/* ── Page 1: Overview ── */
+.ts-p1-body {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  min-height: 400px;
+}
+
+.ts-p1-views {
+  padding: 18px;
+  border-right: 1.5px solid #C8C2B8;
+}
+
+.ts-p1-views-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ts-view-label {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #aaa;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.ts-view-box {
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 320px;
+  background: #fafafa;
+  color: #ccc;
+  font-size: 11px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.ts-cad-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.ts-view-empty {
+  color: #ccc;
+  font-size: 11px;
+}
+
+.ts-img-placeholder {
+  width: 100%;
+  min-height: 120px;
+  border: 1px dashed #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  font-size: 11px;
+  background: #fafafa;
+}
+
+.ts-p1-right {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.ts-p1-section-title {
+  font-weight: 700;
+  font-size: 12px;
+  color: #111;
+}
+
+.ts-color-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 2px;
+}
+
+.ts-color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+.ts-color-text {
+  font-size: 11px;
+}
+
+.ts-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 4px 0;
+}
+
+.ts-material-item {
+  margin-bottom: 4px;
+}
+
+.ts-material-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.ts-material-desc {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.ts-ref-images {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ts-ref-img {
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: contain;
+  border: 1px solid #eee;
+  border-radius: 2px;
+}
+
+/* ── Swatch section ── */
+.ts-swatch-section {
+  border-top: 1.5px solid #C8C2B8;
+  padding: 12px 18px;
+}
+
+.ts-swatch-title {
+  font-weight: 700;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+.ts-swatch-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ts-swatch-item {
+  border: 1px solid #ddd;
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  gap: 5px;
+}
+
+.ts-swatch-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.ts-swatch-box {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #eee;
+  background: #f5f5f5;
+}
+
+.ts-swatch-ref {
+  font-size: 9px;
+  color: #888;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* ── Page 2: Technical Comments ── */
+.ts-p2-views {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1.5px solid #C8C2B8;
+  min-height: 280px;
+}
+
+.ts-p2-panel {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-p2-panel:first-child {
+  border-right: 1.5px solid #C8C2B8;
+}
+
+.ts-p2-panel .ts-view-box {
+  flex: 1;
+  height: 280px;
+}
+
+.ts-p2-tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1.5px solid #C8C2B8;
+}
+
+.ts-p2-half {
+  overflow: hidden;
+}
+
+.ts-p2-half:first-child {
+  border-right: 1.5px solid #C8C2B8;
+}
+
+.ts-p2-th {
+  display: flex;
+  background: #f0f0f0;
+  border-bottom: 1.5px solid #C8C2B8;
+}
+
+.ts-p2-th-cell {
+  padding: 6px 10px;
+  font-weight: 700;
+  font-size: 11px;
+  border-right: 1.5px solid #C8C2B8;
+  flex: 1;
+}
+
+.ts-p2-th-cell:last-child {
+  border-right: none;
+}
+
+.ts-p2-tr {
+  display: flex;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.ts-p2-tr:last-child {
+  border-bottom: none;
+}
+
+.ts-p2-td-title {
+  width: 160px;
+  flex-shrink: 0;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border-right: 1px solid #E8E8E8;
+  color: #111;
+  line-height: 1.4;
+}
+
+.ts-p2-td-desc {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 11px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ── Page 3: Sample Size ── */
+.ts-p3-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ts-p3-table {
+  border-right: 1.5px solid #C8C2B8;
+  overflow: hidden;
+}
+
+.ts-p3-th {
+  display: flex;
+  background: #f0f0f0;
+  border-bottom: 1.5px solid #C8C2B8;
+}
+
+.ts-p3-th-cell {
+  padding: 7px 12px;
+  font-weight: 700;
+  font-size: 11px;
+  border-right: 1.5px solid #C8C2B8;
+}
+
+.ts-p3-th-cell:last-child {
+  border-right: none;
+}
+
+.ts-p3-tr {
+  display: flex;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.ts-p3-tr:last-child {
+  border-bottom: none;
+}
+
+.ts-p3-td {
+  padding: 6px 12px;
+  font-size: 11px;
+  border-right: 1px solid #E8E8E8;
+  display: flex;
+  align-items: center;
+}
+
+.ts-p3-td:last-child {
+  border-right: none;
+}
+
+.ts-p3-id {
+  font-weight: 700;
+  font-size: 10px;
+  color: #111;
+  font-family: monospace;
+}
+
+.ts-p3-val {
+  justify-content: flex-end;
+  font-weight: 600;
+  gap: 4px;
+}
+
+.ts-p3-drawings {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ts-drawing-label {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #888;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.ts-drawing-box {
+  border: 1px solid #eee;
+  background: #fafafa;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.ts-drawing-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ── Inline edit (EC) in tech sheet ── */
+.ts-ec {
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 1px 4px;
+  margin: -1px -4px;
+  transition: background 0.15s;
+  position: relative;
+  display: inline-block;
+  min-width: 30px;
+}
+
+.ts-ec:hover {
+  background: #eef4ff;
+  outline: 1.5px dashed #2d6aff;
+}
+
+.ts-ec-changed {
+  background: #fffbe6 !important;
+  outline: 1.5px solid #f0cc40 !important;
+}
+
+.ts-ec-tip {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  background: #2d6aff;
+  color: #fff;
+  font-size: 8.5px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 20;
+}
+
+.ts-ec:hover .ts-ec-tip {
+  opacity: 1;
+}
+
+.ts-ec-empty {
+  color: #bbb;
+  font-style: italic;
+}
+
+.ts-ec-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.ts-ec-inp {
+  border: 1.5px solid #2d6aff;
+  background: #eef4ff;
+  border-radius: 3px;
+  padding: 4px 8px;
+  font-size: inherit;
+  color: #111;
+  outline: none;
+  width: 100%;
+  font-family: inherit;
+}
+
+.ts-ec-ta {
+  border: 1.5px solid #2d6aff;
+  background: #eef4ff;
+  border-radius: 3px;
+  padding: 4px 8px;
+  font-size: inherit;
+  color: #111;
+  outline: none;
+  width: 100%;
+  resize: vertical;
+  min-height: 48px;
+  font-family: inherit;
+}
+
+.ts-ec-acts {
+  display: flex;
+  gap: 4px;
+}
+
+.ts-ec-save {
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  padding: 3px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.ts-ec-save:hover {
+  background: #15803d;
+}
+
+.ts-ec-cancel {
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 3px 8px;
+  font-size: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.ts-ec-cancel:hover {
+  background: #d0d0d0;
+}
+
+/* ── Add / Delete rows ── */
+.ts-add-row {
+  background: none;
+  border: 1.5px dashed #ccc;
+  padding: 5px 12px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #888;
+  transition: all 0.15s;
+}
+
+.ts-add-row:hover {
+  border-color: #2d6aff;
+  color: #2d6aff;
+}
+
+.ts-row-del {
+  background: none;
+  border: 1px solid #ddd;
+  color: #bbb;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 10px;
+  flex-shrink: 0;
+  transition: all 0.15s;
+  padding: 0;
+  line-height: 1;
+}
+
+.ts-row-del:hover {
+  background: #e53e3e;
+  color: #fff;
+  border-color: #e53e3e;
+}
+
+.ts-row-wrap {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* ── Print styles ── */
+@media print {
+  .ts-ec { cursor: default; }
+  .ts-ec:hover { background: none; outline: none; }
+  .ts-ec-tip { display: none; }
+  .ts-add-row, .ts-row-del { display: none; }
+  .ts-page { break-inside: avoid; page-break-after: always; border: 1px solid #ccc; }
+}
